@@ -61,7 +61,8 @@ create_archive()
     then
         #Repertoire trash de l'utilisateur courant
         archive_dir=~/trash
-        archive_name=archive_$(date +%d_%m_%Y_%k_%M)_tar.gz
+        mkdir -p $archive_dir
+	archive_name=archive_$(date +%d_%m_%Y_%k_%M)_tar.gz
         tar -czvf ${archive_dir}/${archive_name} ${files_to_delete}
         echo "Archive : ${archive_name} cree"
         echo "#######################################"
