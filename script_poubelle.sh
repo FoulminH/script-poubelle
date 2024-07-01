@@ -11,6 +11,9 @@ cat <<EOF
 Usage:
     ./script_poubelle.sh <FICHIER_1> <FICHIER_2> ... <FICHIER_10>
 
+Exemple: 
+    ./script_poubelle.sh fichier1 fichier2 fichier3 fichier4
+
 Description :
     Le script "script_poubelle.sh" vous permet de simuler l'equivalent d'une poubelle sur un systeme Linux.
     Le script fonctionne sur les fichiers ordinaires et repertoires dont l'utilisateur à l'autorisatrion de supprimer. Le reste sera exclu de toute operation.
@@ -23,7 +26,7 @@ create_file()
     #Creer les fichiers
     for i in {1..10}
     do
-        touch file${i}
+        touch fichier${i}
     done
 }
 
